@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OlympicGamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameCountry" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Olympiads" Relationship="Self.FK__Olympiads__IdCou__49C3F6B7" FromRole="Country" ToRole="Olympiads" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK__Persons__IdCount__4AB81AF0" FromRole="Country" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="KindsOfSport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameKind" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK__Persons__IdKindO__4BAC3F29" FromRole="KindsOfSport" ToRole="Persons" />
+  </EntityType>
+  <EntityType Name="Olympiads">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="YearOf" Type="Int32" />
+    <Property Name="IsWinter" Type="Boolean" />
+    <Property Name="IdCountry" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Olympiads__IdCou__49C3F6B7" FromRole="Olympiads" ToRole="Country" />
+    <NavigationProperty Name="Results" Relationship="Self.FK__Results__IdOlymp__4D94879B" FromRole="Olympiads" ToRole="Results" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+    <Property Name="IdCountry" Type="Int32" />
+    <Property Name="IdKindOfSport" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Persons__IdCount__4AB81AF0" FromRole="Persons" ToRole="Country" />
+    <NavigationProperty Name="KindsOfSport" Relationship="Self.FK__Persons__IdKindO__4BAC3F29" FromRole="Persons" ToRole="KindsOfSport" />
+    <NavigationProperty Name="Results" Relationship="Self.FK__Results__IdPerso__4CA06362" FromRole="Persons" ToRole="Results" />
+  </EntityType>
+  <EntityType Name="Results">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Medal" Type="Int32" />
+    <Property Name="IdPerson" Type="Int32" />
+    <Property Name="IdOlympiad" Type="Int32" />
+    <NavigationProperty Name="Olympiads" Relationship="Self.FK__Results__IdOlymp__4D94879B" FromRole="Results" ToRole="Olympiads" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK__Results__IdPerso__4CA06362" FromRole="Results" ToRole="Persons" />
+  </EntityType>
+  <Association Name="FK__Olympiads__IdCou__49C3F6B7">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Olympiads" Type="Self.Olympiads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Olympiads">
+        <PropertyRef Name="IdCountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persons__IdCount__4AB81AF0">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Persons" Type="Self.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="IdCountry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persons__IdKindO__4BAC3F29">
+    <End Role="KindsOfSport" Type="Self.KindsOfSport" Multiplicity="0..1" />
+    <End Role="Persons" Type="Self.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KindsOfSport">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="IdKindOfSport" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Results__IdOlymp__4D94879B">
+    <End Role="Olympiads" Type="Self.Olympiads" Multiplicity="0..1" />
+    <End Role="Results" Type="Self.Results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Olympiads">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Results">
+        <PropertyRef Name="IdOlympiad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Results__IdPerso__4CA06362">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="0..1" />
+    <End Role="Results" Type="Self.Results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Results">
+        <PropertyRef Name="IdPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OlympicGamesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Country" EntityType="Self.Country" />
+    <EntitySet Name="KindsOfSport" EntityType="Self.KindsOfSport" />
+    <EntitySet Name="Olympiads" EntityType="Self.Olympiads" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" />
+    <EntitySet Name="Results" EntityType="Self.Results" />
+    <AssociationSet Name="FK__Olympiads__IdCou__49C3F6B7" Association="Self.FK__Olympiads__IdCou__49C3F6B7">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Olympiads" EntitySet="Olympiads" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persons__IdCount__4AB81AF0" Association="Self.FK__Persons__IdCount__4AB81AF0">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persons__IdKindO__4BAC3F29" Association="Self.FK__Persons__IdKindO__4BAC3F29">
+      <End Role="KindsOfSport" EntitySet="KindsOfSport" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Results__IdOlymp__4D94879B" Association="Self.FK__Results__IdOlymp__4D94879B">
+      <End Role="Olympiads" EntitySet="Olympiads" />
+      <End Role="Results" EntitySet="Results" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Results__IdPerso__4CA06362" Association="Self.FK__Results__IdPerso__4CA06362">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Results" EntitySet="Results" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

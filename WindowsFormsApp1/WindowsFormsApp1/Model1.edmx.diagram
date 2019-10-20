@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ca8d4784755d4c499b53e6467fccbbf7" Name="Diagram1">
+        <EntityTypeShape EntityType="OlympicGamesModel.Country" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlympicGamesModel.KindsOfSport" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlympicGamesModel.Olympiads" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlympicGamesModel.Persons" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlympicGamesModel.Results" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="OlympicGamesModel.FK__Olympiads__IdCou__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="OlympicGamesModel.FK__Persons__IdCount__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="OlympicGamesModel.FK__Persons__IdKindO__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="OlympicGamesModel.FK__Results__IdOlymp__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="OlympicGamesModel.FK__Results__IdPerso__4CA06362" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,29 @@
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Вероника\ШАГ\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ChoiceCountry.resources
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ChoiceCountry.resources
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Романенко Вероника\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
